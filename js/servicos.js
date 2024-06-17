@@ -1,6 +1,6 @@
 const serviço = {
   nome:[
-    "Microagulhamento",
+    "Microagulhamento Facial",
     "Limpeza de Pele",
     "Alta Frequência",
     "Drenagem Detox",
@@ -12,10 +12,10 @@ const serviço = {
     "Desintoxique seu corpo e reduza o inchaço com nossa drenagem linfática detox, promovendo bem-estar e leveza."
   ],
   imagem:[
-    "https://static.wixstatic.com/media/4f65be_5c5e313ea19f4140978d1b589fc8c5e8~mv2.jpg/v1/fill/w_555,h_372,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/4f65be_5c5e313ea19f4140978d1b589fc8c5e8~mv2.jpg",
-    "https://static.wixstatic.com/media/4f65be_993ddd7013dd45c5a475cedd410546b8~mv2.jpg/v1/fill/w_555,h_372,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/4f65be_993ddd7013dd45c5a475cedd410546b8~mv2.jpg",
-    "https://static.wixstatic.com/media/4f65be_9e8d71a7c4ab459f9602c69f08b6f177~mv2.jpg/v1/fill/w_555,h_372,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/4f65be_9e8d71a7c4ab459f9602c69f08b6f177~mv2.jpg",
-    "https://static.wixstatic.com/media/4f65be_9e8d71a7c4ab459f9602c69f08b6f177~mv2.jpg/v1/fill/w_555,h_372,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/4f65be_9e8d71a7c4ab459f9602c69f08b6f177~mv2.jpg"
+    "images/microagulhamento.webp",
+    "images/limpeza.webp",
+    "images/altafrequencia.webp",
+    "images/drenagem.jpg"
   ],
   nomeModal:[
     "modalMicro",
@@ -23,23 +23,23 @@ const serviço = {
     "modalAlta",
     "modalDrenagemDetox",
   ],
-  tituloModal:[
-    "Micro Agulhamento",
-    "Limpeza de Pele",
-    "Alta frequência",
-    "Drenagem Detox",
-  ],
+  // tituloModal:[
+  //   "Microagulhamento Facial",
+  //   "Limpeza de Pele",
+  //   "Alta frequência",
+  //   "Drenagem Detox",
+  // ],
   detalhesModal:[
-    ``,
-    ``,
-    ``,
+    `Nosso serviço de microagulhamento utiliza agulhas finas para criar microperfurações na pele, promovendo a regeneração celular. Ideal para tratar cicatrizes de acne, linhas finas e poros dilatados. Recomendamos um mínimo de 3 sessões para resultados ótimos.`,
+    `Nosso tratamento de limpeza de pele inclui esfoliação, extração de cravos e aplicação de máscaras hidratantes e calmantes. Ideal para todos os tipos de pele, especialmente para quem busca uma pele mais limpa e saudável.`,
+    `O tratamento de alta frequência utiliza correntes elétricas suaves para aumentar a circulação sanguínea, eliminar bactérias e estimular a produção de colágeno. Excelente para combater acne, manchas e sinais de envelhecimento.`,
     `A drenagem linfática detox ajuda a eliminar toxinas, reduzir o inchaço e melhorar a circulação. Ideal para quem busca uma sensação de leveza e desintoxicação corporal.`,
   ],
   beneficiosModal:[
-    "",
-    "",
-    "",
-    "Reduz inchaço e retenção de líquidos <br>Melhora a circulação sanguínea <br>Elimina toxinas do corpo <br>Sensação de bem-estar e leveza <br>Garantias ou Certificações: <br><br>Técnicas de massagem comprovadas <br>Profissionais certificados e atenciosos</p>",
+    `<li>Estimula a produção de colágeno</li><li>Reduz cicatrizes e linhas finas</li><li>Melhora a textura e o tom da pele</li><li>Procedimento rápido e minimamente invasivo</li><li>Tempo de recuperação mínimo</li>`,
+    `<li>Remove cravos e impurezas</li><li>Melhora a hidratação e a textura da pele</li><li>Previne o aparecimento de acne</li><li>Sensação de frescor e limpeza imediata</li>`,
+    `<li>Melhora a circulação sanguínea</li><li>Reduz acne e inflamações</li><li>Estimula a produção de colágeno</li><li>Acelera a cicatrização da pele</li>`,
+    "<li>Reduz inchaço e retenção de líquidos </li><li>Melhora a circulação sanguínea </li><li>Elimina toxinas do corpo </li><li>Sensação de bem-estar e leveza </li>Garantias ou Certificações: <br><li>Técnicas de massagem comprovadas </li><li>Profissionais certificados e atenciosos</li>",
   ]
   };
   
@@ -75,7 +75,7 @@ modais += `<div class="modal fade" id="`+ serviço.nomeModal[valor2] +`">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h4 class="modal-title">`+ serviço.tituloModal[valor2]+`</h4>
+        <h4 class="modal-title">`+ serviço.nome[valor2]+`</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">

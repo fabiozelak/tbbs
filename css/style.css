@@ -18,8 +18,8 @@ h1{
     background-position: right top;
     background-attachment: fixed;
     background-size: 100%;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 15%;
+    padding-bottom: 15%;
     color: white;
 }
 #home>h1{
@@ -55,3 +55,18 @@ h1{
     --bs-btn-disabled-bg: #dfc13f;
     --bs-btn-disabled-border-color: #dfc13f;
 }
+
+.telefone{
+    color: #323232;
+}
+.card-title{
+    height: 2em;
+}
+.init-hidden{
+    opacity: 0;
+    transition: 1s opacity linear;
+}
+ .init-hidden-off{
+    opacity: 1;
+    
+ }
