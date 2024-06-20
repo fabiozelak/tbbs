@@ -50,14 +50,14 @@
         <p>Cuide-se, mime-se</p>
     </section>
     <section id="sobre" class="container-fluid">
-        <div class="row m-5 texto">
-            <div class=" col-lg-5 p-5 mt-5">
+        <div class="row m-5 texto ">
+            <div class=" col-lg-5 p-5 mt-5 mov">
                 <h2 class="fw-bold">Sobre</h2>
                 <p class="" style="text-align:justify; font-size:17px;">Bem-Vinda à Taciany Barth Beauty &amp; Skin – Seu Refúgio de Bem-Estar Feminino</p>
                 <p class="" style="text-align:justify; font-size:17px;">Na Taciany Barth Beauty &amp; Skin, mergulhe em uma experiência única dedicada à beleza, saúde e bem-estar da mulher. Acreditamos que a verdadeira beleza reside na harmonia entre o corpo, mente e alma, e é isso que me motiva a oferecer tratamentos personalizados para realçar a sua beleza natural e promover o seu equilíbrio interior.</p>
             </div>
-            <div class="col-lg-7 p-5 init-hidden">
-                <img src="images/mulheres.webp" width="100%" alt="Mulheres" class="py-5">
+            <div class="col-lg-7 p-5">
+                <img src="images/mulheres.webp" width="100%" alt="Mulheres" class="py-5 init-hidden">
             </div>
 
         </div>
@@ -123,10 +123,15 @@
 </footer>
 <script>
     // https://www.youtube.com/watch?v=Hgsygm-yMdc
-    const observer =new IntersectionObserver(entries =>{
-        // console.log(entries)
-        entries[0].target.classlist.add('.init-hidden-off')
-    })
+    const observer = new IntersectionObserver(entries =>{
+        console.log(entries[0].intersectionRatio)
+        if(entries[0].intersectionRatio >= 0.5){
+                    const nomeClasse = entries[0].target.classList
+        console.log(nomeClasse)
+        nomeClasse.add('init-hidden-off')
+    }
+        },{threshold: 0.5}
+)
     Array.from(document.querySelectorAll('.init-hidden')).forEach(element => {
         observer.observe(element)
     })

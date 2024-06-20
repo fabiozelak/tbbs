@@ -31,6 +31,12 @@ h1{
 #home>p{
     text-align: center;
 }
+div.mov {
+    position: relative;
+    animation-name: desliza;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
 #sobre>.texto{
     background-color: #dfc13f;
 }
@@ -63,10 +69,17 @@ h1{
     height: 2em;
 }
 .init-hidden{
+    
     opacity: 0;
-    transition: 1s opacity linear;
+    transition: 3s opacity linear;
 }
  .init-hidden-off{
+    
     opacity: 1;
     
  }
+ @keyframes desliza {
+    0%   {right:200px; top:0px;}
+    100% {right:0px; top:0px;}
+}
+//fazer a animação começar depois.
