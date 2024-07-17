@@ -1,0 +1,180 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+:root{
+    --fundo: #ebd88b95;
+    /* --fundobotao: rgb(235, 190, 139); */
+    --fundobotao: #f1a477;
+
+    
+    /* --fundobotaohover: rgb(173, 139, 100); */
+    --fundobotaohover: #CC7A49;
+    --cortexto:rgb(169, 85, 52);
+    --cinza: #4e4e4e;
+    --cinzaclaro: #dfdede;
+}
+#menu{
+    animation: andamenu 0.5s ease-in-out;
+}
+.navbar{
+    color: var(--cortexto) ;
+    font-weight: bold;
+    background-color: var(--fundo);
+}
+.whatsapp {
+    z-index: 9999999;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: auto;
+    bottom: 30px;
+    left: auto;
+    right: 30px;
+    box-shadow: 1px 1px 4px 1px var(--cinza);
+    background-color: #0ec962;
+    background-image: url(../images/logo_whats.png);
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 100px;
+
+}
+#home{
+    animation: aparecer 1s ease-in-out backwards;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/home.jpg);
+    /* background-image: url("../images/home.jpg"); */
+    background-repeat: no-repeat;
+    background-position: right;
+    /* background-attachment: fixed; */
+    background-size: 100%;
+    background-color: black;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    color: var(--cinzaclaro);
+    text-align: center;
+}
+#home>h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 1px 1px 5px #4e4e4e;
+}
+#home>h4{
+    
+    color: var(--fundo);
+    font-weight: bolder;
+    text-shadow: 1px 1px 5px #3e3e3e;
+}
+#home>a{
+    font-weight: bold;
+}
+#quemSomos{
+    animation: slidesecao 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
+    background-color: var(--fundo);
+}
+.divisor{
+    background-image: url("../images/separador-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+ height: 50px;
+}
+#quemSomos>div>h3{
+ color: var(--cinza);
+}
+.card{
+        border: 0px;
+        height: 450px;
+
+}
+.btn-success{
+    background-color: var(--fundobotao);
+    font-weight: bold;
+    /* color: var(--cinza); */
+    border: 0px;
+    padding: 10px;
+    margin: auto;
+    width: 50%;
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.3);
+}
+.btn-success:hover{
+    background-color: var(--fundobotaohover);
+    font-weight: bold;
+    /* color: var(--cinza); */
+    border: 0px;
+    padding: 10px;
+    margin: auto;
+    width: 50%;
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.3);
+}
+.btn-success:active{
+    background-color: #AD5A29 !important;
+
+}
+.card-body>p{
+    font-size: smaller;
+}
+.divisor2{
+    background-image: url("../images/separador-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+ height: 15px;
+ background-size: 50%;
+}
+#redessociais>.row{
+    background-color: var(--fundo);
+    border: var(--cortexto);
+    /* color: var(--cortexto); */
+}
+.card{
+ animation: revela 1s ease-in-out;
+ /* animation-delay: 1s; */
+ animation-timeline: view();
+ animation-range: cover 0% cover 20%;
+}
+#contato>.row{
+    background-color: lightgray;
+}
+@keyframes revela{
+    from {
+        translate: 100px 0px;
+        clip-path: inset(0% 0% 0% 100%);
+        opacity: 0.5;
+    }
+    to {
+        translate: 0px 0px;
+        clip-path: inset(0% 0% 0% 0%);
+        opacity: 1;
+    }
+}
+@keyframes aparecer{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes andamenu{
+    from {
+        transform: translate(50px);
+    }
+    to {
+        transform: translate(0px);
+    }
+}
+
+@keyframes slidesecao{
+    from {
+        
+        translate: -100vw 0;
+        opacity: 0;
+    }
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
