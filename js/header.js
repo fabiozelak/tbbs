@@ -1,5 +1,12 @@
+// import { dados } from './hidden';
+// import {dados} from './hidden'
+// console.log(listaFiltrada);
+menu = "";
+for(i=0;i<listaFiltrada.length;i++){
+    // console.log(listaFiltrada[i].nome);
+    menu +=`<li><a class="dropdown-item" href="#">`+listaFiltrada[i].nome+`</a></li>`
+  };
 const header = document.getElementsByTagName("header");
-console.log(header);
 header[0].innerHTML =
 
 
@@ -26,8 +33,10 @@ header[0].innerHTML =
             <li class="nav-item">
                 <a class="nav-link" href="#servicos">SERVIÇOS</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#procedimentos">PROCEDIMENTOS</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PROCEDIMENTOS</a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">`+ menu + `
+          </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#contato">CONTATO</a>
