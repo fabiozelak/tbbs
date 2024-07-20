@@ -1,5 +1,4 @@
 document.getElementById("redessociais").innerHTML = `
-<div class="divisor"></div>
         <h2 class="text-center fw-bold">NOSSAS REDES</h2>
         <div class="row">
             <div class="col-lg-4 p-3 text-center">

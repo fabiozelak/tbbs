@@ -1,14 +1,14 @@
 constroiServicos = "";
-for(i=0;i<listaFiltrada.length;i++){
-    constroiServicos += `<div class="col-lg-4">
+for (i = 0; i < listaFiltrada.length; i++) {
+  constroiServicos += `<div class="col-lg-4">
                 <div class="container mt-3">
                     <div class="card" style="width:300px">
-                        <img class="card-img-top" src="`+listaFiltrada[i].thumb+`" alt="Card image"
+                        <img class="card-img-top" src="`+ listaFiltrada[i].thumb + `" alt="Card image"
                             style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">`+listaFiltrada[i].nome+`</h4>
+                            <h4 class="card-title">`+ listaFiltrada[i].nome + `</h4>
                             <div class="divisor2"></div>
-                            <p class="card-text">`+listaFiltrada[i].descricao+`</p>
+                            <p class="card-text">`+ listaFiltrada[i].descricao + `</p>
                             <div class="row">
                                 <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal"
                                     data-bs-target="#modalMicro">
@@ -21,34 +21,54 @@ for(i=0;i<listaFiltrada.length;i++){
                 </div>
             </div>`
 }
-console.log(constroiServicos);
+// console.log(constroiServicos);
 conteudo = document.getElementsByTagName("conteudo");
 conteudo[0].innerHTML = `
-         <section id="destaque" class="container-fluid">
-             <h4>Bem vinda a Taciany Barth Beauty & Skin</h4>
-<h1>Cuide-se, mime-se</h1>
-<a href="https://wa.me/5541996186186?text=Olá,%20gostaria%20de%20marcar%20uma%20avaliação."
-    class="btn btn-secondary mt-2">Agende uma avaliação.</a>
-         </section>
-         <section id="quemSomos" class="row container-fluid mx-auto py-5">
-             <div class="col-lg-6 p-5">
-            <h3 class="fw-bold">QUEM SOMOS</h3>
-            <h4 class="" style="text-align:justify; font-size:17px;">Bem-Vinda à Taciany Barth Beauty &amp; Skin – Seu
-                Refúgio de Bem-Estar Feminino</h4>
-        </div>
-        <div class="col-lg-6 p-5">
-            <p class="" style="text-align:justify; font-size:17px;">Na Taciany Barth Beauty &amp; Skin, mergulhe em uma
-                experiência única dedicada à beleza, saúde e bem-estar da mulher. Acreditamos que a verdadeira beleza
-                reside na harmonia entre o corpo, mente e alma, e é isso que me motiva a oferecer tratamentos
-                personalizados para realçar a sua beleza natural e promover o seu equilíbrio interior.</p>
-        </div>
-         </section>
+                <section id="destaque" class="container-fluid">
+            <h4>Bem vinda a Taciany Barth Beauty & Skin</h4>
+            <h1>Cuide-se, mime-se</h1>
+            <a href="https://wa.me/5541996186186?text=Olá,%20gostaria%20de%20marcar%20uma%20avaliação."
+                class="btn btn-secondary mt-2">Agende uma avaliação.</a>
+        </section>
+        <section id="quemSomos" class=" container-fluid mx-auto py-5">
+            <div class="row">
+                <div class="col-lg-6 p-5">
+                    <h3 class="fw-bold">QUEM SOMOS</h3>
+                    <h4 class="" style="text-align:justify; font-size:17px;">Bem-Vinda à Taciany Barth Beauty &amp;
+                        Skin– Seu
+                        Refúgio de Bem-Estar Feminino</h4>
+                </div>
+                <div class="col-lg-6 p-5">
+                    <p class="" style="text-align:justify; font-size:17px;">Na Taciany Barth Beauty &amp; Skin, mergulhe
+                        em uma
+                        experiência única dedicada à beleza, saúde e bem-estar da mulher. Acreditamos que a verdadeira
+                        beleza
+                        reside na harmonia entre o corpo, mente e alma, e é isso que me motiva a oferecer tratamentos
+                        personalizados para realçar a sua beleza natural e promover o seu equilíbrio interior.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="container mt-3">
+                        <div class="card mx-auto border-0 bg-transparent" style="width:400px">
+                            <img class="card-img-top rounded-circle mx-auto mt-3" src="images/tacy2.png"
+                                alt="Taciany Barth" style="width:60%">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Taciany Karoline Barth</h4>
+                                <p class="card-text text-center">Esteticista e Cosmetóloga</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
          <div class="container-fluid divisor">
          </div>
          <section id="servicos" class="container-fluid">
            <div class="row container mx-auto">
             <h2 class="text-center fw-bold">SERVIÇOS</h2>
-            `+constroiServicos+`
+            `+ constroiServicos + `
         </div>
          </section>
          <section id="depoimentos">

@@ -4,7 +4,7 @@
 menu = "";
 for(i=0;i<listaFiltrada.length;i++){
     // console.log(listaFiltrada[i].nome);
-    menu +=`<li><a class="dropdown-item" href="#">`+listaFiltrada[i].nome+`</a></li>`
+    menu +=`<li><a class="dropdown-item" onClick="js/teste.js">`+listaFiltrada[i].nome+`</a></li>`
   };
 const header = document.getElementsByTagName("header");
 header[0].innerHTML =
