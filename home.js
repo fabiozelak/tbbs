@@ -35,7 +35,7 @@ conteudo[0].innerHTML = `
                 <div class="col-lg-6 p-5">
                     <h3 class="fw-bold">QUEM SOMOS</h3>
                     <h4 class="" style="text-align:justify; font-size:17px;">Bem-Vinda à Taciany Barth Beauty &amp;
-                        Skin– Seu
+                        Skin - Seu
                         Refúgio de Bem-Estar Feminino</h4>
                 </div>
                 <div class="col-lg-6 p-5">
@@ -54,8 +54,9 @@ conteudo[0].innerHTML = `
                             <img class="card-img-top rounded-circle mx-auto mt-3" src="images/tacy2.png"
                                 alt="Taciany Barth" style="width:60%">
                             <div class="card-body">
-                                <h4 class="card-title text-center">Taciany Karoline Barth</h4>
-                                <p class="card-text text-center">Esteticista e Cosmetóloga</p>
+                                <h4 class="card-title text-center fw-bold">Taciany Karoline Barth</h4>
+                                <p class="card-text text-center"><span class="fw-bold">Esteticista e Cosmetóloga</span><br>
+                                Física e Matemática</p>
                             </div>
                         </div>
                     </div>
