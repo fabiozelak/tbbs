@@ -142,6 +142,9 @@
 #contato{
     background-color: lightgray;
 }
+.dropdown-menu{
+--bs-dropdown-bg:#f3e8bb;
+}
 @keyframes revela{
     from {
         translate: 100px 0px;
