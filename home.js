@@ -51,7 +51,7 @@ conteudo[0].innerHTML = `
                 <div class="col">
                     <div class="container mt-3">
                         <div class="card mx-auto border-0 bg-transparent" style="width:400px">
-                            <img class="card-img-top rounded-circle mx-auto mt-3" src="images/tacy_card.jpeg"
+                            <img class="card-img-top rounded-circle mx-auto mt-3" src="images/tacy_card.JPEG"
                                 alt="Taciany Barth" style="width:60%">
                             <div class="card-body">
                                 <h4 class="card-title text-center fw-bold">Taciany Karoline Barth</h4>
