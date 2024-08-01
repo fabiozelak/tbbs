@@ -1,16 +1,49 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 :root{
     --fundo: #ebd88b95;
-    /* --fundobotao: rgb(235, 190, 139); */
     --fundobotao: #f1a477;
-
-    
-    /* --fundobotaohover: rgb(173, 139, 100); */
     --fundobotaohover: #CC7A49;
+    --corwhats: #0ec962;
     --cortexto:rgb(169, 85, 52);
     --cinza: #4e4e4e;
     --cinzaclaro: #dfdede;
+    --bgbotao: #AD5A29;
+    --sombratextoh1: #4e4e4e;
+    --sombratextoh4:#3e3e3e;
+    --fundocontato: lightgray;
+
 }
+:root.azul{
+    --fundo: #EDF4F6;
+    --fundobotao: #071952;
+    --fundobotaohover: #088395;
+    --corwhats: #0ec962;
+    --cortexto:rgb(169, 85, 52);
+    --cinza: #4e4e4e;
+    --cinzaclaro: #dfdede;
+    --bgbotao: #37b7c3;
+    --sombratextoh1: #4e4e4e;
+    --sombratextoh4:#3e3e3e;
+    --fundocontato: lightgray;
+}
+:root.verde{
+    --fundo: #cce6ec;
+    --fundobotao: #0085a1;
+    --fundobotaohover: #cce6ec;
+    --corwhats: #0ec962;
+    --cortexto:rgb(169, 85, 52);
+    --cinza: #4e4e4e;
+    --cinzaclaro: #dfdede;
+    --bgbotao: #37b7c3;
+    --sombratextoh1: #4e4e4e;
+    --sombratextoh4:#3e3e3e;
+    --fundocontato: lightgray;
+}
+.color-1 { background-color: rgb(3, 187, 133); }
+.color-2 { background-color: rgb(0, 162, 110); }
+.color-3 { background-color: rgb(0, 138, 88); }
+.color-4 { background-color: rgb(187, 3, 88); }
+.color-5 { background-color: rgb(187, 3, 26); }
 #menu{
     animation: andamenu 0.5s ease-in-out;
 }
@@ -29,7 +62,7 @@
     left: auto;
     right: 30px;
     box-shadow: 1px 1px 4px 1px var(--cinza);
-    background-color: #0ec962;
+    background-color: var(--corwhats);
     background-image: url(../images/logo_whats.png);
     background-position: 50%;
     background-size: cover;
@@ -43,13 +76,13 @@
 }
 #destaque{
     animation: aparecer 1s ease-in-out backwards;
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/home.jpg);
+    background-image: url(../images/home.jpg);
     /* background-image: url("../images/home.jpg"); */
     background-repeat: no-repeat;
     background-position: right;
     /* background-attachment: fixed; */
     background-size: 100%;
-    background-color: black;
+    /* background-color: black; */
     padding-top: 15%;
     padding-bottom: 15%;
     color: var(--cinzaclaro);
@@ -59,13 +92,13 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 50px;
-    text-shadow: 1px 1px 5px #4e4e4e;
+    text-shadow: 1px 1px 5px var(--sombratextoh1);
 }
 #destaque>h4{
     
     color: var(--fundo);
     font-weight: bolder;
-    text-shadow: 1px 1px 5px #3e3e3e;
+    text-shadow: 1px 1px 5px var(--sombratextoh4);
 }
 #destaque>a{
     font-weight: bold;
@@ -113,7 +146,7 @@
     box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.3);
 }
 .btn-success:active{
-    background-color: #AD5A29 !important;
+    background-color: var(--bgbotao) !important;
 
 }
 .card-body>p{
@@ -140,10 +173,10 @@
  animation-range: cover 0% cover 20%;
 }
 #contato{
-    background-color: lightgray;
+    background-color: var(--fundocontato);
 }
 .dropdown-menu{
---bs-dropdown-bg:#f3e8bb;
+--bs-dropdown-bg:var(--fundo);
     --bs-dropdown-border-color: none;
 }
 @keyframes revela{

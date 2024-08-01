@@ -10,10 +10,10 @@ for (i = 0; i < listaFiltrada.length; i++) {
                             <div class="divisor2"></div>
                             <p class="card-text">`+ listaFiltrada[i].descricao + `</p>
                             <div class="row">
-                                <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal"
-                                    data-bs-target="#modalMicro">
+                                <a type="button" class="btn btn-success mt-auto"
+                                    href="pages/`+listaFiltrada[i].link+`.html">
                                     Saiba Mais
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -196,4 +196,3 @@ conteudo[0].innerHTML = `
           </div>
          </section>
 `;
-// conteudo[0].innerHTML = destaque;
