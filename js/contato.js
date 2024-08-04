@@ -1,15 +1,12 @@
 document.getElementById("contato").innerHTML = `
-
+<div class="divisor"></div>
     <section id="contato">
         
         <h2 class="text-center fw-bold">CONTATO</h2>
         <div class="row">
             <div class="col-lg-4 text-center">
                 <a href="https://wa.me/5541996186186?text=Olá,%20gostaria%20de%20marcar%20uma%20avaliação." class="btn" style="height: 100%; width: 100%;">
-
-
                     <!-- <h5 class="text-cente py-4">WhatsApp</h5> -->
-
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-whatsapp my-4" viewBox="0 0 16 16" style="font-size: 90px;">
                         <path

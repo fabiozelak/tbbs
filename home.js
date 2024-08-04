@@ -48,8 +48,7 @@ conteudo[0].innerHTML = `
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <div class="container mt-3">
+                    <div class="container center mt-3">
                         <div class="card mx-auto border-0 bg-transparent" style="width:400px">
                             <img class="card-img-top rounded-circle mx-auto mt-3" src="images/tacy_card.JPEG"
                                 alt="Taciany Barth" style="width:60%">
@@ -60,7 +59,6 @@ conteudo[0].innerHTML = `
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
 
         </section>
