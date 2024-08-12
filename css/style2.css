@@ -180,6 +180,16 @@
 --bs-dropdown-bg:var(--fundo);
     --bs-dropdown-border-color: none;
 }
+.sobesecao{
+    animation:sobesecao 2s ease 1s 1 normal forwards;
+    animation-timeline: view();
+}
+.descesecao{
+    animation: descesecao 2s ease 1s 1 normal forwards;
+    animation-timeline: view();
+}
+
+
 @keyframes revela{
     from {
         translate: 100px 0px;
@@ -219,5 +229,28 @@
         translate: 0 0;
         opacity: 1;
     }
+}
+
+@keyframes sobesecao {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes descesecao {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
 }
 
