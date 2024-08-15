@@ -1,4 +1,4 @@
-const myObserver = new IntersectionObserver((entries)=>{
+const myObserver = new IntersectionObserver((entries) =>{
     entries.forEach((entry) =>{
         if(entry.isIntersecting){
             entry.target.classList.add('sobe_secao')
@@ -7,4 +7,4 @@ const myObserver = new IntersectionObserver((entries)=>{
 })
 const elements = document.querySelectorAll('.desce_secao')
 
-elements.forEach((elements) => myObserver.observe(element))
+elements.forEach((element) => myObserver.observe(element))
