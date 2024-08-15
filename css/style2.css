@@ -180,12 +180,12 @@
 --bs-dropdown-bg:var(--fundo);
     --bs-dropdown-border-color: none;
 }
-.sobesecao{
-    animation:sobesecao 2s ease 1s 1 normal forwards;
-    animation-timeline: view();
+.sobe_secao{
+opacity: 1;
 }
-.descesecao{
+.desce_secao{
 opacity: 0;
+	
     animation: descesecao 2s ease 1s 1 normal forwards;
     animation-timeline: view();
 }
