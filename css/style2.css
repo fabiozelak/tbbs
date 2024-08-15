@@ -182,12 +182,16 @@
 }
 .sobe_secao{
 opacity: 1;
+filter: blur(0px);
+	transition: all 1s;
+    transform: translateY(0);
+	
 }
 .desce_secao{
 opacity: 0;
-	
-    animation: descesecao 2s ease 1s 1 normal forwards;
-    animation-timeline: view();
+	filter: blur(15px);
+	transition: all 1s;
+    transform: translateY(-100%);
 }
 
 
