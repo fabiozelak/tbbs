@@ -180,13 +180,17 @@
 --bs-dropdown-bg:var(--fundo);
     --bs-dropdown-border-color: none;
 }
-.sobesecao{
-    animation:sobesecao 2s ease 1s 1 normal forwards;
-    animation-timeline: view();
+.paragrafo_hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translatey(80%);
+    transition: all 1.5s;
 }
-.descesecao{
-    animation: descesecao 2s ease 1s 1 normal forwards;
-    animation-timeline: view();
+.paragrafo_show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translatey(0);
+    transition: all 1.5s;
 }
 
 
@@ -231,7 +235,7 @@
     }
 }
 
-@keyframes sobesecao {
+/* @keyframes sobesecao {
 	0% {
 		opacity: 0;
 		transform: translateY(50px);
@@ -241,8 +245,8 @@
 		opacity: 1;
 		transform: translateY(0);
 	}
-}
-@keyframes descesecao {
+} */
+/* @keyframes descesecao {
 	0% {
 		opacity: 1;
 		transform: translateY(0);
@@ -252,5 +256,5 @@
 		opacity: 0;
 		transform: translateY(50px);
 	}
-}
+} */
 

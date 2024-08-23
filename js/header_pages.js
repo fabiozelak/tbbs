@@ -4,7 +4,7 @@
 menu = "";
 for(i=0;i<listaFiltrada.length;i++){
     // console.log(listaFiltrada[i].nome);
-    menu +=`<li><a class="dropdown-item" onClick="location.href='pages/`+listaFiltrada[i].link+`.html';">`+listaFiltrada[i].nome+`</a></li>`
+    menu +=`<li><a class="dropdown-item" onClick="location.href='`+listaFiltrada[i].link+`.html';">`+listaFiltrada[i].nome+`</a></li>`
   };
 const header = document.getElementsByTagName("header");
 header[0].innerHTML =
