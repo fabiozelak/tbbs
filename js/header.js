@@ -1,11 +1,22 @@
 // import { dados } from './hidden';
 // import {dados} from './hidden'
 // console.log(listaFiltrada);
-menu = "";
+menu_corporal = "";
+menu_facial = "";
 for(i=0;i<listaFiltrada.length;i++){
     // console.log(listaFiltrada[i].nome);
-    menu +=`<li><a class="dropdown-item" onClick="location.href='pages/`+listaFiltrada[i].link+`.html';">`+listaFiltrada[i].nome+`</a></li>`
+    if(listaFiltrada[i].facial == "y"){
+    menu_facial +=`<li><a class="dropdown-item" onClick="location.href='pages/`+listaFiltrada[i].link+`.html';">`+listaFiltrada[i].nome+`</a></li>`
+    }else if(listaFiltrada[i].facial == "n"){
+        menu_corporal +=`<li><a class="dropdown-item" onClick="location.href='pages/`+listaFiltrada[i].link+`.html';">`+listaFiltrada[i].nome+`</a></li>`
+    }else{
+        menu_facial +=`<li><a class="dropdown-item" onClick="location.href='pages/`+listaFiltrada[i].link+`.html';">`+listaFiltrada[i].nome+`</a></li>`
+        menu_corporal +=`<li><a class="dropdown-item" onClick="location.href='pages/`+listaFiltrada[i].link+`.html';">`+listaFiltrada[i].nome+`</a></li>`
+    }
+    
   };
+
+
 const header = document.getElementsByTagName("header");
 header[0].innerHTML =
 
@@ -30,12 +41,17 @@ header[0].innerHTML =
             <li class="nav-item">
                 <a class="nav-link" href="#quemSomos">QUEM SOMOS</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#servicos">SERVIÇOS</a>
+            </li> -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">ESTÉTICA FACIAL</a>
+                          <a><ul class="dropdown-menu" aria-labelledby="navbarDropdown" role="button">`+ menu_facial + `</a>
+          </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PROCEDIMENTOS</a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">`+ menu + `
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">ESTÉTICA CORPORAL</a>
+                          <a><ul class="dropdown-menu" aria-labelledby="navbarDropdown" role="button">`+ menu_corporal + `</a>
           </ul>
             </li>
             <li class="nav-item">
