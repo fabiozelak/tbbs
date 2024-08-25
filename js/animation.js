@@ -1,4 +1,3 @@
-
 const myObserver = new IntersectionObserver((entries) => {
 entries.forEach((entry)=>
 {
@@ -14,3 +13,4 @@ entries.forEach((entry)=>
 const paragrafos = document.querySelectorAll('.paragrafo_hidden')
 
 paragrafos.forEach((element) => myObserver.observe(element) )
+
