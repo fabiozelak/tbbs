@@ -31,7 +31,7 @@ document.getElementById("contato").innerHTML = `
 
 
             <div class="col-lg-4 text-center">
-                <a href="https://maps.app.goo.gl/Qa9waMXxTL85QhKWA" class="btn" style="height: 100%; width: 100%;">
+                <a href="https://maps.app.goo.gl/6CPV2ZRWCGuSjcuJ6" class="btn" style="height: 100%; width: 100%;">
                     <!-- <h5 class="text-center py-4">Endereço</h5> -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                         class="bi bi-pin-map my-4" viewBox="0 0 16 16" style="font-size: 100px;">
