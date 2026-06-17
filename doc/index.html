@@ -1,31 +1,335 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="azul">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentos Taciany Barth Beaty & Skin</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link
-    href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
-    rel="stylesheet"/>
-    <link rel="stylesheet" href="../css/style2.css">
+    <title>Página de Documentos da Tacy</title>
+    
+    <!-- Google Fonts para uma tipografia moderna e limpa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fdfbf9; /* Fundo off-white caloroso/relaxante */
+            --text-color: #2e2a27; /* Grafite suave */
+            --text-light: #736b66; /* Texto secundário */
+            --primary-color: hsl(21, 18%, 40%); /* Tom elegante de Taupe/Avelã */
+            --accent-color: #c9ab9c; /* Rose Gold/Nude suave */
+            --card-bg: #c9ab9c;
+            --shadow-sm: 0 4px 12px rgba(120, 96, 83, 0.03);
+            --shadow-md: 0 12px 30px rgba(120, 96, 83, 0.08);
+            --radius: 16px;
+            --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        /* Cabeçalho */
+        .main-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .main-header h1 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .main-header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        /* Seções */
+        .doc-section {
+            margin-bottom: 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza a seção inteira */
+        }
+
+        .doc-section h2 {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 600px; /* Alinha o título com a largura dos cards */
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .doc-section h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, rgba(201, 171, 156, 0.4), transparent);
+        }
+
+        /* Lista Vertical de Cards */
+        .list-docs {
+            display: flex;
+            flex-direction: column; /* Força o alinhamento vertical */
+            gap: 14px;
+            width: 100%;
+            max-width: 600px; /* Limita a largura para ficar elegante no desktop */
+        }
+
+        /* Card de Documento */
+        .doc-card {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: var(--card-bg);
+            border: 1px solid rgba(120, 96, 83, 0.06);
+            border-radius: var(--radius);
+            text-decoration: none;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .doc-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-color);
+        }
+
+        /* Ícone do Documento */
+        .doc-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            background-color: rgba(201, 171, 156, 0.12);
+            color: var(--primary-color);
+            border-radius: 12px;
+            margin-right: 16px;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .doc-card:hover .doc-icon {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        /* Informações */
+        .doc-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .doc-info h3 {
+            font-size: 1rem;
+            color: var(--text-color);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .doc-meta {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-pdf {
+            background-color: #fff0f0;
+            color: #da4f4f;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.68rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Seta indicativa à direita */
+        .doc-arrow {
+            margin-left: auto;
+            color: var(--text-light);
+            opacity: 0.3;
+            transition: var(--transition);
+            transform: translateX(0);
+        }
+
+        .doc-card:hover .doc-arrow {
+            opacity: 1;
+            color: var(--primary-color);
+            transform: translateX(4px);
+        }
+
+        /* Rodapé */
+        .main-footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid rgba(120, 96, 83, 0.06);
+            padding-top: 24px;
+        }
+
+        /* Ajustes para Celular */
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 16px;
+            }
+            .main-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="mx-auto my-4 text-center">
+
+    <div class="container">
+        <!-- Cabeçalho Principal -->
+        <header class="main-header">
             <h1>Página de Documentos da Tacy</h1>
-    <h3><a class="btn btn-success" href="Ficha de Anamnese Corporal.pdf">Ficha de Anamnese Corporal</a></h3>
-    <h3><a class="btn btn-success" href="Ficha Anamnese Facial.pdf">Ficha de Anamese Facial</a></h3>
-    <h1>Termos de Consentimento</h1>
-    <h3><a class="btn btn-success" href="limpeza_pele.pdf">Limpeza de pele</a></h3>
-    <h3><a class="btn btn-success" href="drenagem.pdf">Drenagem Linfática</a></h3>
-    <h3><a class="btn btn-success" href="massagem_detox.pdf">Massagem detox</a></h3>
-    <h3><a class="btn btn-success" href="massagem_ultrasson.pdf">Massagem Ultrasson</a></h3>
-    <h3><a class="btn btn-success" href="revitalizacao_facial.pdf">Revitalização Facial</a></h3>
+            <p>Selecione o documento abaixo para visualizar ou realizar o download.</p>
+        </header>
+
+        <main>
+            <!-- Seção 1: Fichas de Anamnese -->
+            <section class="doc-section">
+                <h2>Fichas de Anamnese</h2>
+                <div class="list-docs">
+                    
+                    <a href="Ficha de Anamnese Corporal.pdf" class="doc-card" target="_blank">
+                        <div class="doc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3>Ficha de Anamnese Corporal</h3>
+                            <div class="doc-meta"><span class="badge-pdf">PDF</span><span>Acessar arquivo</span></div>
+                        </div>
+                        <div class="doc-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                    </a>
+
+                    <a href="Ficha Anamnese Facial.pdf" class="doc-card" target="_blank">
+                        <div class="doc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3>Ficha de Anamnese Facial</h3>
+                            <div class="doc-meta"><span class="badge-pdf">PDF</span><span>Acessar arquivo</span></div>
+                        </div>
+                        <div class="doc-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- Seção 2: Termos de Consentimento -->
+            <section class="doc-section">
+                <h2>Termos de Consentimento</h2>
+                <div class="list-docs">
+
+                    <a href="limpeza_pele.pdf" class="doc-card" target="_blank">
+                        <div class="doc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3>Limpeza de Pele</h3>
+                            <div class="doc-meta"><span class="badge-pdf">PDF</span><span>Acessar arquivo</span></div>
+                        </div>
+                        <div class="doc-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                    </a>
+
+                    <a href="drenagem.pdf" class="doc-card" target="_blank">
+                        <div class="doc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3>Drenagem Linfática</h3>
+                            <div class="doc-meta"><span class="badge-pdf">PDF</span><span>Acessar arquivo</span></div>
+                        </div>
+                        <div class="doc-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                    </a>
+
+                    <a href="massagem_detox.pdf" class="doc-card" target="_blank">
+                        <div class="doc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3>Massagem Detox</h3>
+                            <div class="doc-meta"><span class="badge-pdf">PDF</span><span>Acessar arquivo</span></div>
+                        </div>
+                        <div class="doc-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                    </a>
+
+                    <a href="massagem_ultrasson.pdf" class="doc-card" target="_blank">
+                        <div class="doc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3>Massagem Ultrassom</h3>
+                            <div class="doc-meta"><span class="badge-pdf">PDF</span><span>Acessar arquivo</span></div>
+                        </div>
+                        <div class="doc-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                    </a>
+
+                    <a href="revitalizacao_facial.pdf" class="doc-card" target="_blank">
+                        <div class="doc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3>Revitalização Facial</h3>
+                            <div class="doc-meta"><span class="badge-pdf">PDF</span><span>Acessar arquivo</span></div>
+                        </div>
+                        <div class="doc-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2026 Página de Documentos da Tacy. Todos os direitos reservados.</p>
+        </footer>
     </div>
+
 </body>
 </html>
